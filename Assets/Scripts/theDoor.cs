@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class theDoor : MonoBehaviour
 {
+    public Animator door;
+    public string doorAction = "open";
     public int keysCollected = 0;
     // Start is called before the first frame update
 
@@ -23,8 +25,8 @@ public class theDoor : MonoBehaviour
         Debug.Log(keysCollected);
     }
 
-    public void destroyDoor()
+    public void openDoor()
     {
-        Destroy(gameObject);
+        door.Play(doorAction, 0, 0.0f);
     }
 }

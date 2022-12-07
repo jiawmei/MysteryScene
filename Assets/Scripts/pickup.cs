@@ -16,6 +16,7 @@ public class pickup : MonoBehaviour
         if (Input.GetMouseButton(0))
         {
             float pickUpDistance = 3f;
+            float doorDistance = 1f;
             if(Physics.Raycast(playerCameraTransform.position, playerCameraTransform.forward, out RaycastHit raycastHit, pickUpDistance, theKeys))
             {
                 if(raycastHit.transform.TryGetComponent(out keys key))
@@ -25,13 +26,13 @@ public class pickup : MonoBehaviour
                     door.totalKeys();
                 }
             }
-            if (Physics.Raycast(playerCameraTransform.position, playerCameraTransform.forward, out RaycastHit raycastHit2, pickUpDistance, theDoor))
+            if (Physics.Raycast(playerCameraTransform.position, playerCameraTransform.forward, out RaycastHit raycastHit2, doorDistance, theDoor))
             {
                 if (raycastHit2.transform.TryGetComponent(out theDoor door))
                 {
-                    if(door.keysCollected == 7)
+                    if(door.keysCollected == 0)
                     {
-                        door.destroyDoor();
+                        door.openDoor();
                     }
                 }
             }
