@@ -8,6 +8,7 @@ public class pickup : MonoBehaviour
     public LayerMask theKeys;
     public LayerMask theDoor;
     public theDoor door;
+    public AudioSource pickupsound;
     //public keys key;
     // Update is called once per frame
     
@@ -22,6 +23,7 @@ public class pickup : MonoBehaviour
                 if(raycastHit.transform.TryGetComponent(out keys key))
                 {
                     key.pickedUp();
+                    pickupsound.Play();
                     door.addOneKey();
                     door.totalKeys();
                 }

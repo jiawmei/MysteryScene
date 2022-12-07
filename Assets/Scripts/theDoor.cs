@@ -7,6 +7,7 @@ public class theDoor : MonoBehaviour
     public Animator door;
     public string doorAction = "open";
     public int keysCollected = 0;
+    public AudioSource doorsound;
     // Start is called before the first frame update
 
 
@@ -28,5 +29,6 @@ public class theDoor : MonoBehaviour
     public void openDoor()
     {
         door.Play(doorAction, 0, 0.0f);
+        doorsound.Play();
     }
 }

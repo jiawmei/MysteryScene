@@ -7,6 +7,7 @@ public class FlashlightFollow : MonoBehaviour
     public bool lightOn = false;
     public GameObject lightSource;
     public bool failSafe = false;
+    public AudioSource clickingsound;
 
     // Update is called once per frame
     void Update()
@@ -17,6 +18,7 @@ public class FlashlightFollow : MonoBehaviour
             {
                 failSafe = true;
                 lightSource.SetActive(true);
+                clickingsound.Play();
                 lightOn = true;
                 StartCoroutine(FailSafe());
             }
@@ -24,6 +26,7 @@ public class FlashlightFollow : MonoBehaviour
             {
                 failSafe = true;
                 lightSource.SetActive(false);
+                clickingsound.Play();
                 lightOn = false;
                 StartCoroutine(FailSafe());
             }
