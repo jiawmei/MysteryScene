@@ -15,8 +15,8 @@ public class pickup : MonoBehaviour
     {
         if (Input.GetMouseButton(0))
         {
-            float pickUpDistance = 3f;
-            float doorDistance = 2f;
+            float pickUpDistance = 5f;
+            float doorDistance = 8f;
             if(Physics.Raycast(playerCameraTransform.position, playerCameraTransform.forward, out RaycastHit raycastHit, pickUpDistance, theKeys))
             {
                 if(raycastHit.transform.TryGetComponent(out keys key))
