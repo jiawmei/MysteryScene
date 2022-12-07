@@ -8,6 +8,7 @@ public class PlayerCam : MonoBehaviour
     public float sensY;
 
     public Transform orientation;
+    
 
     float xrot;
     float yrot;

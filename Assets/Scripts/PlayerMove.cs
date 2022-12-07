@@ -10,6 +10,7 @@ public class PlayerMove : MonoBehaviour
     public float moveSpeed;
 
     public Transform orientation;
+    
 
     float horizontalInput;
     float verticalInput;
