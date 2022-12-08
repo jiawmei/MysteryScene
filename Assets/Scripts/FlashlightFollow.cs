@@ -22,7 +22,7 @@ public class FlashlightFollow : MonoBehaviour
                 lightOn = true;
                 StartCoroutine(FailSafe());
             }
-            if(lightOn == true && failSafe == false)
+            if (lightOn == true && failSafe == false)
             {
                 failSafe = true;
                 lightSource.SetActive(false);
