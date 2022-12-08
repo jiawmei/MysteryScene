@@ -26,16 +26,19 @@ Once you escape, there is a bonfire outside.
 
 We have a player that you control in the first person and you are able to toggle a flashlight on and off as the player.
 
-## Moving part 1
+### Moving part 1
 
 We have a light source in the form a flashlight that follows the player around and it can be turned on and off using right click.
 
-## Moving part 2
+### Moving part 2
 
 You go around the scene looking for 5 keys and when the 5 keys are found a door opens letting you escape into a backyard area that has a fire.
 
-## Interactions
+### Interactions
 You can pick up the keys and also interact with the door to open it once you have all the keys.
 
-## Skybox
+### Skybox
 Nighttime skybox to make the scene dark.
+
+### Post Processing
+The camera has motion blur and the scene has some color adjustment to make it darker.
